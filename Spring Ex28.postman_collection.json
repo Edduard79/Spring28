@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "3fb889cf-278d-4ddb-a3e3-f3ebc1121526",
+		"name": "Spring Ex28",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26075556"
+	},
+	"item": [
+		{
+			"name": "Download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/file/download?fileName=fileditesto.txt",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"file",
+						"download"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "fileditesto.txt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/D:/Desktop2/DeskE/Programmazione/Lezioni/5Spring/Ex28/uploadFolder/filetoupload.txt"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/file/upload",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
