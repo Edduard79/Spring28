@@ -49,6 +49,8 @@ public class FileController {
             case "png":
                 response.setContentType(MediaType.IMAGE_PNG_VALUE);
                 break;
+            default:
+                break;
         }
         response.setHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\"");
         return fileStorageService.download(fileName);
